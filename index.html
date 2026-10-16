@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>ITIL 4 Mock Exams – Papers 14 &amp; 15</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#f6f7fb;--card:#fff;--tx:#1b1f2a;--mut:#667;--bd:#d8dce6;--ac:#3b5bdb;--ok:#2b8a3e;--okb:#e6f6ea;--no:#c92a2a;--nob:#fdeaea}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14161c;--card:#1d2029;--tx:#e8eaf0;--mut:#9aa;--bd:#343949;--ac:#7b93ff;--ok:#6fd286;--okb:#1b3324;--no:#ff8787;--nob:#3a1e1e}}
+:root[data-theme="dark"]{--bg:#14161c;--card:#1d2029;--tx:#e8eaf0;--mut:#9aa;--bd:#343949;--ac:#7b93ff;--ok:#6fd286;--okb:#1b3324;--no:#ff8787;--nob:#3a1e1e}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+main{max-width:760px;margin:0 auto;padding:16px}
+h1{font-size:1.4rem;margin:8px 0}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);padding:8px 0;z-index:2;display:flex;justify-content:space-between;align-items:center;font-size:.9rem;color:var(--mut);border-bottom:1px solid var(--bd)}
+.q{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:14px;margin:14px 0}
+.q.bad{border-color:var(--no)}.q.good{border-color:var(--ok)}
+.q p{margin:0 0 10px;font-weight:600}
+label{display:block;padding:9px 12px;margin:6px 0;border:1px solid var(--bd);border-radius:8px;cursor:pointer}
+label:hover{border-color:var(--ac)}
+label.sel{border-color:var(--ac);background:color-mix(in srgb,var(--ac) 12%,transparent)}
+label.right{border-color:var(--ok);background:var(--okb)}
+label.wrong{border-color:var(--no);background:var(--nob)}
+input{margin-right:8px}
+.fb{font-size:.9rem;margin-top:8px}
+button{background:var(--ac);color:#fff;border:0;border-radius:8px;padding:10px 18px;font-size:1rem;cursor:pointer;margin:4px 6px 4px 0}
+button.sec{background:transparent;color:var(--ac);border:1px solid var(--ac)}
+#res{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:16px;margin:14px 0;display:none}
+#res .big{font-size:2rem;font-weight:700}
+#res a{color:var(--no);cursor:pointer;margin-right:8px;display:inline-block}
+.note{font-size:.8rem;color:var(--mut)}
+.nav{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}.nav button{flex:1 1 90px;margin:0;padding:10px 6px}.nav button:not(.on){background:transparent;color:var(--ac);border:1px solid var(--ac)}
+.em{display:block;width:100%;box-sizing:border-box;padding:10px;margin:6px 0 10px;border:1px solid var(--bd);border-radius:8px;background:var(--bg);color:var(--tx);font-size:1rem}
+a.btn{display:inline-block;background:var(--ac);color:#fff!important;padding:10px 18px;border-radius:8px;text-decoration:none;margin:4px 6px 4px 0}
+details{border-top:1px solid var(--bd);padding:6px 0;font-size:.9rem}
+</style></head><body><main>
+<h1>ITIL 4 Mock Exams – Papers 14 &amp; 15</h1>
+<div class="nav" id="nav"><button data-p="14">Paper 14</button><button data-p="15">Paper 15</button></div>
+<div class="q" id="gate"><p id="gt"></p>
+<label style="cursor:default">Email to receive the result<input class="em" id="em" type="email" placeholder="xyz@gmail.com"></label>
+<button id="start">Start test</button><button class="sec" id="hb">Previous attempts</button>
+<div id="hist" style="display:none;margin-top:10px"></div></div>
+<div id="test" style="display:none">
+<div class="bar"><span id="prog"></span><span id="pm"></span></div>
+<div id="res"></div><div id="qs"></div>
+<button id="sub">Submit &amp; see score</button><button class="sec" id="rst">Reset</button></div>
+<p class="note">Papers 14–15 use your supplied answer keys with options in original order. Pass mark is 65% (26 / 40).</p>
+</main>
+<script>
+const T14=`What is the definition of a service?|The means by which an organization is directed and controlled;A set of specialized organizational capabilities for enabling value to customers;A method for visualizing work, identifying potential blockages and resource conflicts, and managing work in progress;A means of enabling value co-creation by facilitating outcomes that customers want to achieve, without the customer having to manage specific costs and risks|D
+Identify the missing word(s): Utility is the [?] offered by a product or service to meet a particular need.|Assurance;Promise;Functionality;Outcome|C
+Identify the missing word: [?] is the practice of ensuring that risks are properly assessed, authorizing changes to proceed, and managing a change schedule in order to maximize the number of successful IT changes.|IT asset management;Service configuration management;Change control;Service level management|C
+Identify the missing word(s): An event is any change of state that has significance for the management of a(n) [?] or other configuration items.|Output;Product;Service;Outcome|C
+What is the purpose of the 'information security management' practice?|Protecting an organization by understanding and managing risks to the confidentiality, integrity, and availability of information;Ensuring that services achieve agreed and expected performance levels, satisfying current and future demand in a cost-effective way;Ensuring that services deliver agreed levels of availability or that change can be assessed;Systematically observing services and service components and recording and reporting selected changes of state identified as events|A
+What is the purpose of the 'monitoring and event management' practice?|Supporting the agreed quality of a service by handling all pre-defined, user-initiated service requests in an effective and user-friendly manner;Systematically observing services and service components and recording and reporting selected changes of state identified as events;Minimizing the negative impact of incidents by restoring normal service operation as quickly as possible;Ensuring that all an organization's projects are successfully delivered|B
+What is the purpose of the 'incident management' practice?|Supporting the agreed quality of a service by handling all pre-defined, user-initiated service requests in an effective and user-friendly manner;Ensuring that services deliver agreed levels of availability or that change can be assessed;Ensuring that all an organization's projects are successfully delivered;Minimizing the negative impact of incidents by restoring normal service operation as quickly as possible|D
+What is defined as the practice of ensuring that accurate and reliable information about the configuration of services, and the configuration items that support them, is available when and where needed?|Change control;IT asset management;Service configuration management;Service level management|C
+Identify the missing word: The [?] is the practice of capturing demand for incident resolution and service requests.|Incident management;Service level management;Service request management;Service desk|D
+Dion Training has decided to offer two membership levels to their training programs. The first membership level includes all of their video courses, practice exams, and study guides for a single monthly fee. This plan does not provide the students with the actual exam voucher to take the certification exams, though. What term best describes this membership level which provides several services for a single price?|An outcome;Value;A service offering;An output|C
+Which describes outputs?|Tangible or intangible deliverables;Functionality offered by a product or service;Results for a stakeholder;Configuration of an organization’s resources|A
+What term best describes a person or a group of people that has its own functions with responsibilities, authorities, and relationships to achieve its objectives?|Consumer;Service provider;Customer;Organization|D
+Which describes the nature of the guiding principles?|A guiding principle is mandatory and must be used when adopting a new service within the organization;A guiding principle is specific and only applies to one initiative within the organization;An organization must implement the guiding principles exactly as defined by the ITIL 4 Foundation manual;A guiding principle is a recommendation used as guidance in all circumstances|D
+Which guiding principle is most affected by the customer experience (CX)?|Progress iteratively with feedback;Focus on value;Think and work holistically;Start where you are|B
+Dion Training Solutions wants to build a new service to automatically fulfill exam voucher orders for students. Currently, exam vouchers are fulfilled manually by a staff member once the order is received from the student by copying and pasting the voucher number from a spreadsheet into an email template and sending out the email to the students. Before attempting to automate this fulfillment process, the team lead takes an inventory of the current services, processes, and procedures that are being used by the voucher fulfillment team to see if they might be able to be reused. What guiding principle best describes this scenario?|Focus on value;Collaborate and promote visibility;Start where you are;Keep it simple and practical|C
+Dion Training Solutions has decided to create an online course for the ITIL 4 Foundation exam. The company developed their curriculum and then invited 50 students to participate in live training to determine if the training was effective. During the training, some students didn't understand the concept of the service value chain, so the instructor rewrote that portion of the curriculum. Which guiding principle is being demonstrated by this approach to curriculum development?|Focus on value;Collaborate and promote visibility;Optimize and automate;Progress iteratively with feedback|D
+You are working to design a new service for internal use across your organization. As part of your design efforts, you form a small team with relevant stakeholders from the human resources, information technology, sales, and other relevant departments to ensure the service adequately meets each department's needs and hope this results in great acceptance of the service when delivered. Which guiding principle best describes this scenario?|Focus on value;Collaborate and promote visibility;Start where you are;Keep it simple and practical|B
+John is currently working to create a new service that would allow a customer to purchase a digital product online and have it delivered to the user's inbox. John is responsible for the payment portion of this service, but Sally is responsible for the digital product fulfillment portion of the service. Which of the following should John do in order to follow the principle of 'think and work holistically'?|John should optimize his code to ensure it runs efficiently;John should meet with Sally to determine how the digital product fulfillment will occur;John should wait until Sally's portion is complete before beginning his to ensure they work together properly;John should tell Sally to wait until his portion is done before starting hers to ensure compatibility|B
+Which of these are a key focus of the ‘organization and people’ dimension?|Security and compliance;Activities that transform inputs into outputs;Roles and responsibilities;Contracts and agreements|C
+Which of these are NOT a key focus of the ‘partners and suppliers’ dimension?|Workflow management and inventory systems;Roles and responsibilities;Contracts and agreements;Security and compliance|A
+Which ITIL concept describes the service value chain?|Seven guiding principles;Four dimensions of service management;Service value system;Practices|C
+What operating model outlines the key activities required to respond to demand and facilitate value realization through the creation and management of products and services?|Continual improvement;Service value chain;Practices;Guiding principles|B
+Which value chain activity includes portfolio decisions for design and transition?|Engage;Improve;Plan;Deliver and support|C
+Which step of the continual improvement model states that "each improvement initiative should support the organization's goals and objectives"?|Where are we now;What is the vision;Where do we want to be;How do we get there|B
+When working within the 'what is the vision' step of the continual improvement model, what must you ensure to occur?|The high-level direction of the initiative has been understood;The detailed steps of how to achieve your objectives;What metrics you will use to measure success;The current processes being used|A
+Bridgett is leading an improvement initiative within your company. She has been told that the company wants to have the highest customer satisfaction in the industry. Currently, the company has a customer satisfaction rating of 92% but the industry leader has an average of 94%. Bridgett decides that the company should set their goal of obtaining a 96% customer satisfaction score within the next 12 months. What step of the continual improvement model is Bridgett currently in?|What is the vision;Where do we want to be;How do we get there;Where are we now|B
+What is a normal change?|A change that doesn't need risk assessment because the procedure has been preauthorized;A change that needs to be assessed, authorized, and scheduled by a change authority;A change that doesn't need risk assessment because it is required to resolve an incident;A change that is routine in nature, is fully documented, and the risks are well understood|B
+Your company's external router has just malfunctioned and needs to be replaced. The entire organization's connection to the Wide Area Network will remain offline until this router is replaced. Which type of change should be initiated?|Standard;Normal;Emergency;Routine|C
+What is a change schedule NOT used for?|Developing features;Planning changes;Avoiding conflicts;Assigning resources|A
+How can you ensure the incidents with the highest business impact are resolved first?|Implement incident classification;Use automation;Utilize self-help tools;Utilize problem management|A
+Which incidents should be logged?|Only an incident that cannot be immediately resolved;Every incident should be logged;Any incident that occurs more than once;Only incidents that are not solved using self-help tools|B
+What is NOT a phase in problem management?|Problem identification;Problem classification;Problem control;Error control|B
+If a problem cannot be resolved quickly, you might wish to document and implement a temporary solution to reduce the impact of the problem. What is this known as?|Incident;Solution;Workaround;Known error|C
+How does 'service request management' contribute to the 'improve' value chain activity?|It ensures that users continue to be productive when they need assistance from the service provider;It collects user-specific requirements, sets expectations, and provides status updates;It analyzes data to identify opportunities to provide new service request options;It acquires pre-approved service components to help fulfill service requests|C
+Fill in the blank: Service requests and their fulfillment should be [?] and automated to the greatest degree possible.|Uniquely handled;Standardized;Creatively solved;Ignored|B
+Your smartphone isn't working properly. You call the toll-free number for your service provider's support center. Which practice would you reach that serves as the entry point for all contact between the service provider and its users?|Problem management;Service desk;Service request management;Incident management|B
+Which is a recommendation of the ‘service desk’ practice?|Service desks should never use technologies such as SMS and chat functions;Service desks should be highly technical functions;Service desks should have a practical understanding of the business practices across the organization;Service desks should always use a virtual service desk|C
+What is a service level agreement used for?|To measure the performance of services from a customer's point of view;To measure the performance of the service availability;To measure the performance of the service capability;To measure the performance of the service from the service provider's point of view.|A
+How does 'service level management' contribute to the 'plan' value chain activity?|Uses feedback from users about the service and requirements from customers to make the service better;Provides information about the actual service performance and trends;Collects and processes feedback from customers and users;Collects feedback during interactions and communicates service performance objectives to the operations and support teams|B
+What should be included in every service level agreement?|Detailed metrics to capture availability of the system;Metrics for system response time;Clearly defined service outcomes;Number of emails sent per hour|C`;
+const T15=`What is the definition of utility?|The assurance that a product or service will meet agreed requirements;A possible event that could cause harm or loss, or make it more difficult to achieve objectives;The functionality offered by a product or service to meet a particular need;A tangible or intangible deliverable that is produced by carrying out an activity|C
+Identify the missing word(s): A customer is a person who defines the requirements for a service and takes responsibility for the [?] of service consumption.|Outcomes;Cost;Outputs;Benefits|A
+What is the definition of an IT asset?|A particular set of settings or options on a given piece of equipment;Any valuable component that can contribute to the delivery of an IT product or service;A means of enabling value co-creation by facilitating outcomes that customers want to achieve, without the customer having to manage specific costs and risks;Any component that needs to be managed in order to deliver an IT service|B
+Identify the missing word(s): A(n) [?] is any component that needs to be managed in order to deliver an IT service.|Product;Outputs;Asset;Configuration item|D
+What is the purpose of the 'relationship management' practice?|Establishing and nurturing links between an organization and its stakeholders at strategic and tactical levels;Supporting the agreed quality of a service by handling all pre-defined, user-initiated service requests in an effective and user-friendly manner;Setting clear business-based targets for service performance so that the delivery of a service can be properly assessed, monitored, and managed against these targets;Ensuring that an organization's suppliers and their performance levels are managed appropriately to support the provision of seamless quality products and services|A
+What is the purpose of the 'problem management' practice?|Ensuring that services deliver agreed levels of availability or that change can be assessed;Supporting the agreed quality of a service by handling all pre-defined, user-initiated service requests in an effective and user-friendly manner;Minimizing the negative impact of incidents by restoring normal service operation as quickly as possible;Reducing the likelihood and impact of incidents by identifying actual and potential causes of incidents, and managing workarounds and known errors|D
+Identify the missing word: [?] management is the practice of minimizing the negative impact of incidents by restoring normal service operation as quickly as possible.|Availability;Event;Incident;Problem|C
+What is defined as the practice of aligning an organization's practices and services with changing business needs through the ongoing identification and improvement of all elements involved in the effective management of products and services?|Service level management;Service request management;Continual improvement;Capacity and performance management|C
+Identify the missing word: Service [?] management is the practice of setting clear business-based targets for service performance so that the delivery of a service can be properly assessed, monitored, and managed against these targets.|Capacity;Availability;Request;Level|D
+Dion Training has decided not to run their own email servers. Instead, Dion Training pays a monthly service fee to Google's G-Suite to provide email services to the company so that Dion Training can receive emails from its students. What best describes this co-creation of value by Dion Training and Google in order to provide email support to Dion Training's students?|Service offering;Service relationship management;Service provision;Service consumption|B
+What term best describes the perceived benefits, usefulness, and importance of something?|Utility;Warranty;Outcome;Value|D
+Your organization is preparing to launch a new service. Your manager is concerned that there is a possibility that something bad might happen which could cause the service to fail and the desired outcome won't be achieved. What term best describes your manager's concerns?|Outputs;Risks;Costs;Utility|B
+Fill in the blank: [?] is/are defined as a recommendation that can guide an organization in all circumstances and will guide organizations when adopting service management.|Guiding principles;Service value chain;Focus on value;Governance|A
+You have been assigned to a team that has been asked to identify how your consumers use a particular service, what the service helps them to do, and how the service helps them to identify their goals. Which of the guiding principles should best be applied in your situation?|Focus on value;Progress iteratively with feedback;Collaborate and promote visibility;Think and work holistically|A
+Your organization is currently running a web hosting service, but it is not providing sufficient utility and warranty. In order to fix this, a team has been assembled and asked to design a new web hosting service. The team manager suggests that the team first look at the existing service and its processes before they begin to design the new service. What guiding principle is being followed by the team manager?|Focus on value;Start where you are;Keep it simple and practical;Optimize and automate|B
+Which guiding principle is focused on involving the right people in the correct roles in order to get additional buy-in for the project and increase the likelihood of long-term success?|Collaborate and promote visibility;Focus on value;Progress iteratively with feedback;Optimize and automate|A
+During a review of the New Account Creation process at your company, you determine that the current process requires 15 steps to create a new account. As you analyze each step, you find that steps 3 and 5 provide no value to the process or the organization. Based on which guiding principle should you eliminate steps 3 and 5 from the process?|Think and work holistically;Keep it simple and practical;Optimize and automate;Focus on value|B
+What refers to the use of technology to perform a step or series of steps correctly and consistently with limited or no human involvement?|Automation;Optimization;Value;Utility|A
+Which service management dimension is focused on the roles and responsibilities of the people involved in a process' workflow?|Organizations and people;Information and technology;Partners and suppliers;Value streams and processes|A
+Which service management dimension is focused on the communication systems and knowledge bases used by employees?|Organizations and people;Information and technology;Partners and suppliers;Value streams and processes|B
+Which ITIL concept describes practices?|Seven guiding principles;Service value system;Service value chain;Four dimensions of service management|B
+Which of the following is NOT an activity within the service value chain?|Plan;Engage;Delivery and Support;Practice|D
+Your company has recently engaged a new supplier to provide you with 3 routers that will handle 1 Gbps of throughput. They are scheduled for installation in three months. Your team is currently configuring the devices in preparation for installation into the network architecture based upon the design requirements. Which value chain activity would best categorize your configuration actions in this scenario?|Design and transition;Engage;Obtain/build;Deliver and support|C
+Management has set a goal to reduce the number of physical servers in the datacenter by 10% this year. Your team is responsible for creating a plan to migrate 50% of the physical servers into virtualized systems. Which step of the continual improvement model are you currently working on?|Where do we want to be;How do we get there;Where are we now;Take action|B
+You are working as part of an improvement initiative and your team would like to release a new module into the existing Customer Relationship Management system. Which type of change should you initiate?|Standard;Normal;Emergency;Routine|B
+What is an emergency change?|A change that doesn't need risk assessment because the procedure has been preauthorized;A change that needs to be assessed, authorized, and scheduled by a change authority;A change that must be implemented as soon as possible because it is required to resolve an incident or security issue;A change that is assessed, authorized, and scheduled as part of ‘continual improvement’|C
+Who is responsible for approving a change within the organization?|CEO;IT Director;Service desk analyst;Change authority|D
+You are attempting to print a document from your workstation to the network printer in your office. The print job failed when you attempted to print, so you called the service desk for assistance. What term best describes your issue?|Problem;Event;Incident;Resolution|C
+Your company has decided to install a service management tool that provides incident management as one of its functions. What is the benefit of using an incident management system?|It can provide automated resolution and closure of complex incidents;It can ensure that incidents are resolved within the agreed upon timeframe in the service level agreement (SLA);It can provide automated matching of incidents to problems or known errors;The system can provide specialized knowledge for solving complicated incidents|C
+What is usually included as part of 'incident management'?|Scripts for collecting initial information about incidents;Detailed procedures for the diagnosis of incidents;Authority to implement changes to a system;Observation of all services and service components to identify any change in state|A
+You are working as a service desk analyst. Within the last hour, you have received 13 calls about users being unable to log on to the network. There appears to be something wrong with the domain controller. What would you classify this scenario as?|Incident;Workaround;Problem;Event|C
+The users on the fourth floor of your building keep calling the service desk to report that their network connectivity is not working properly. The service desk logs each of these incidents, but since there are multiple incidents for the same issue, they forward it to the problem management activity for resolution. During your analysis, you determine that the network switch that services the entire fourth floor is broken and will need to be replaced. You checked the current inventory of spares, but there are none available. It appears this problem will remain for 24 hours until a new switch can be received and installed. How would you categorize the issue described in this scenario?|Known error;Workaround;Problem;Incident|A
+How does 'service request management' contribute to the 'deliver and support' value chain activity?|It ensures that users continue to be productive when they need assistance from the service provider;It collects user-specific requirements, sets expectations, and provides status updates;By initiating standard changes to fulfill service requests;It acquires pre-approved service components to help fulfill service requests|A
+What is an example of an action a service request management employee would undertake as part of the 'obtain/build' activity?|Analyzing data to identify opportunities to provide new service request options;Ensuring users continue to be productive when they need assistance from the service provider;Acquiring pre-approved service components to help fulfill service requests;Initiating standard changes to fulfill service requests|C
+What is true about the service desk?|Service desks should always be a physical team in a single fixed location;Service desks should be designed based on your organization, its business processes, and the user requirements;Service desks should always use a virtual service desk to save money;Service desks should always be local to the organization they support|B
+What activity is the main channel for communication and collaboration with users?|Service level management;Service desk;Incident management;Service request management|B
+You are in a quarterly service level management review with your supervisor. The manager asks your supervisor if the service desk has been meeting their SLA target metrics. Your supervisor proudly proclaims that everything is 'green' (meaning, we are meeting all of the targets). Just then, another executive asks, "If everything is showing as 'green', why am I hearing other users complain that the service is always unavailable for use?" What might be the reason for this?|Your supervisor's data is based on operational metrics;Your supervisor's data is based on business metrics;Your supervisor's data is based on availability metrics;Your supervisor's data is not based on business outcomes|D
+How does 'service level management' contribute to the 'improve' value chain activity?|Uses feedback from users about the service and requirements from customers to make the service better;Provides feedback from interactions with customers into new or changed services;Provides information about the actual service performance and trends;Collects feedback during interactions and communicates service performance objectives to the operations and support teams|A
+You are working as a service desk manager. One of your analysts has created a new workaround for a problem that has been causing issues for users for the last few hours. To ensure all users across the network are notified of this workaround, you decide to post the workaround on the front page of your user service portal on the intranet. During which value chain activity would this occur?|Plan;Improve;Engage;Obtain/build|C
+What is an example of an action a service request management employee would undertake as part of the 'design and transition' activity?|Ensuring users continue to be productive when they need assistance from the service provider;Collecting user-specific requirements, setting expectations, and providing status updates;Acquiring pre-approved service components to help fulfill service requests;Initiating standard changes to fulfill service requests|D`;
+function decodeFixed(t){return t.split("\n").map(l=>{const[q,o,a]=l.split("|");return[q,o.split(";"),a.charCodeAt(0)-65]})}
+const PAPERS={14:{n:"Paper 14: ITIL 4 Foundation Practice Exam #1",qs:decodeFixed(T14)},15:{n:"Paper 15: ITIL 4 Foundation Practice Exam #2",qs:decodeFixed(T15)}};
+const L="ABCD",$=s=>document.querySelector(s),mem={};
+const pass=n=>Math.ceil(n*.65);
+const sg=k=>{try{const v=localStorage.getItem(k);if(v!==null)return v}catch(e){}return mem[k]??null};
+const ss=(k,v)=>{mem[k]=v;try{localStorage.setItem(k,v)}catch(e){}};
+const hist=p=>{try{return JSON.parse(sg('itil_h'+p)||'[]')}catch(e){return[]}};
+let paper=14,ans={},done=false,email="";
+function histRender(){const h=hist(paper).slice().reverse(),qs=PAPERS[paper].qs;
+ $('#hist').innerHTML=h.length?h.map(a=>`<details><summary>${a.t} — <b>${a.s}/${qs.length}</b> (${a.w.length} wrong)</summary>`+(a.w.length?a.w.map(([i,y])=>`<div>Q${i+1}: ${y<0?'skipped':'you '+L[y]}, correct ${L[qs[i][2]]}</div>`).join(''):'Perfect score')+`</details>`).join(''):'<p class="note">No previous attempts for this paper yet.</p>';}
+function show(p,open){paper=p;done=false;ans={};
+ document.querySelectorAll('#nav button').forEach(b=>b.classList.toggle('on',+b.dataset.p==p));
+ $('#gate').style.display='block';$('#test').style.display='none';
+ $('#gt').textContent=PAPERS[p].n+' · '+PAPERS[p].qs.length+' questions';
+ $('#em').value=sg('itil_email')||'';histRender();$('#hist').style.display=open?'block':'none';window.scrollTo(0,0);}
+function render(){done=false;for(const k in ans)delete ans[k];$('#res').style.display='none';$('#sub').disabled=false;
+ const qs=PAPERS[paper].qs,n=qs.length;
+ $('#prog').textContent=`Answered 0 / ${n}`;$('#pm').textContent=`Pass mark: ${pass(n)} / ${n} (65%)`;
+ $('#qs').innerHTML=qs.map((q,i)=>`<div class="q" id="q${i}"><p>${i+1}. ${q[0]}</p>`+q[1].map((o,j)=>`<label id="l${i}_${j}"><input type="radio" name="q${i}" value="${j}">${L[j]}. ${o}</label>`).join('')+`<div class="fb"></div></div>`).join('');
+ document.querySelectorAll('#qs input').forEach(r=>r.onchange=()=>{
+  if(done)return;const i=+r.name.slice(1);ans[i]=+r.value;
+  qs[i][1].forEach((_,j)=>$('#l'+i+'_'+j).classList.toggle('sel',j==ans[i]));
+  $('#prog').textContent=`Answered ${Object.keys(ans).length} / ${n}`;});
+}
+document.querySelectorAll('#nav button').forEach(b=>b.onclick=()=>show(+b.dataset.p));
+$('#hb').onclick=()=>{const h=$('#hist');h.style.display=h.style.display=='none'?'block':'none'};
+$('#start').onclick=()=>{const e=$('#em').value.trim();
+ if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e)){alert('Please enter a valid email address.');return}
+ email=e;ss('itil_email',e);$('#gate').style.display='none';$('#test').style.display='block';render();window.scrollTo(0,0)};
+$('#sub').onclick=()=>{
+ const qs=PAPERS[paper].qs,n=qs.length,pm=pass(n),un=qs.map((_,i)=>i).filter(i=>!(i in ans));
+ if(un.length&&!confirm(un.length+' question(s) unanswered (counted as wrong). Submit anyway?'))return;
+ done=true;$('#sub').disabled=true;let s=0,wrong=[];
+ qs.forEach((q,i)=>{
+  const ok=ans[i]===q[2];if(ok)s++;else wrong.push(i);
+  const box=$('#q'+i);box.classList.add(ok?'good':'bad');
+  q[1].forEach((_,j)=>{const l=$('#l'+i+'_'+j);l.classList.remove('sel');l.querySelector('input').disabled=true;
+   if(j==q[2])l.classList.add('right');else if(j==ans[i])l.classList.add('wrong');});
+  box.querySelector('.fb').innerHTML=ok?`<span style="color:var(--ok)">✔ Correct</span>`:`<span style="color:var(--no)">✘ ${i in ans?'Your answer: '+L[ans[i]]:'Not answered'} — Correct answer: ${L[q[2]]}</span>`;
+ });
+ const h=hist(paper);h.push({t:new Date().toLocaleString(),s,w:wrong.map(i=>[i,i in ans?ans[i]:-1])});ss('itil_h'+paper,JSON.stringify(h.slice(-20)));
+ const pct=Math.round(s/n*100),verdict=s>=pm?'Pass':'Below pass mark';
+ const body=`ITIL 4 – ${PAPERS[paper].n}\nScore: ${s}/${n} (${pct}%) – ${verdict}\nWrong: ${wrong.length}\n\n`+wrong.map(i=>`Q${i+1}: ${i in ans?'your '+L[ans[i]]:'skipped'}, correct ${L[qs[i][2]]}`).join('\n');
+ const href=`mailto:${encodeURIComponent(email)}?subject=${encodeURIComponent('ITIL 4 '+PAPERS[paper].n+' result: '+s+'/'+n)}&body=${encodeURIComponent(body)}`;
+ const r=$('#res');r.style.display='block';
+ r.innerHTML=`<div class="big">${s} / ${n} (${pct}%)</div><div>${s>=pm?'🎉 Pass':'Below pass mark ('+pm+')'} · ${wrong.length} wrong</div>`+
+  (wrong.length?`<p><b>Wrong questions (tap to jump):</b><br>${wrong.map(i=>`<a onclick="document.getElementById('q${i}').scrollIntoView({behavior:'smooth'})">Q${i+1}</a>`).join('')}</p>`:'<p>Perfect score!</p>')+
+  `<a class="btn" href="${href}" target="_blank" rel="noopener">✉ Email result to ${email}</a><button class="sec" onclick="show(paper,true)">Previous attempts</button>`;
+ window.scrollTo({top:0,behavior:'smooth'});
+};
+$('#rst').onclick=()=>{render();window.scrollTo(0,0)};
+show(14);
+</script></body></html>
